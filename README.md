@@ -25,6 +25,16 @@ private void FrmFrogger_KeyDown(object sender, KeyEventArgs e)
 ```
 Wenn Der Keycode vom Event 'e' den Keycode von der Taste mit dem code 'Up' übereinstimmt, soll die Spielerposition auf der Y Achse um 5 verschoben werden.
 
+### Intersects with
+Hiermit kann man bestimmen ob eine Form etwas anderes berührt.
+Beispiel:
+```ruby
+ if (rechteck.IntersectsWith(spieler))
+ {
+    Spieler.X += 10;
+ }
+```
+Wenn das Rechteck 'rechteck' den Spieler berührt, wird die Spielerposition auf der X Achse um 10 verschoben. 
 
 ## Tipps und Tricks
 Ergänzen Sie hier die notwendigen Code-Ausschnitte, um zu zeigen, wie man es macht. 
