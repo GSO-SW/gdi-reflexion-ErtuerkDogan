@@ -11,6 +11,19 @@ Anschließend können wir
 - stoppen (`+ Stop():void`) oder
 - den Zustand abfragen. (`+ Enabled{ get; set; }: bool`) (Standard ist ausgeschaltet: `enabled = false`)
 
+### Keycode
+Der Keycode ist die Bezeichnung von jeder Taste auf der Tastatur. Mit dem Keycode können wir auch festellen wann eine Taste gedrückt und das programm Befehle ausführen lassen.
+Beispiel:
+```ruby
+private void FrmFrogger_KeyDown(object sender, KeyEventArgs e)
+{
+  if(e.KeyCode == Keys.Up)     
+    {
+        Spieler.Y += 5;              
+    }
+}
+```
+Wenn Der Keycode vom Event 'e' den Keycode von der Taste mit dem code 'Up' übereinstimmt, soll die Spielerposition auf der Y Achse um 5 verschoben werden.
 
 
 ## Tipps und Tricks
@@ -22,8 +35,20 @@ Ergänzen Sie hier die notwendigen Code-Ausschnitte, um zu zeigen, wie man es ma
 ### Bewegung animieren
 
 ### Objekte mit Tasten steuern
-
+```ruby
+if (e.KeyCode == Keys.Right)
+    {
+        spieler.X = spieler.X + hoeheJeBereich;
+    }
+```
 ### Verhindern, dass ein Spieler aus dem Bild läuft
+```ruby
+if (spieler.X > breite) 
+{
+    spieler.X = breite - spieler.Width;
+}
+```
+https://github.com/GSO-SW/frogger-hasanerturk/commit/407f7d6f236036f53f1be57ebeadce6820b1d286
 
 ### Spiel pausieren
 
