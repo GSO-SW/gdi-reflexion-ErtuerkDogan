@@ -36,6 +36,15 @@ Beispiel:
 ```
 Wenn das Rechteck 'rechteck' den Spieler berührt, wird die Spielerposition auf der X Achse um 10 verschoben. 
 
+### Double Buffer
+Sorgt dafür das Objekte richtig angezeigt werden und nicht auf grund der Wiederholrate des Bildschirms verschwinden oder Flackern:
+```ruby
+private void FrmFrogger_Load(object sender, EventArgs e)
+{
+    DoubleBuffered = true;
+}
+```
+
 ## Tipps und Tricks
 Ergänzen Sie hier die notwendigen Code-Ausschnitte, um zu zeigen, wie man es macht. 
 - Sie können [CodeBlöcke mit Syntax-Highlighting](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks#syntax-highlighting) einsetzen
